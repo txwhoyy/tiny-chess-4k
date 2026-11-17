@@ -7,10 +7,11 @@
 A chess engine in under 4 KB of Python. `main.py` is the whole engine:
 a 0x88 board with incremental tapered evaluation (material +
 piece-square tables), negamax alpha-beta with PVS, a transposition
-table, null-move pruning, late-move reductions, MVV-LVA move ordering,
-and a quiescence search over captures, promotions and check evasions.
+table, null-move pruning, late-move reductions, MVV-LVA, killer and
+history move ordering, and a quiescence search over captures,
+promotions and check evasions.
 Repetition and the fifty-move rule score 0 in search. It searches a
-fixed budget of 55,000 nodes per move and never reads a clock, so a
+fixed budget of 80,000 nodes per move and never reads a clock, so a
 replayed trial makes exactly the same moves. `main.py` is packed from
 its readable source with the kit's `makefun compress`.
 
